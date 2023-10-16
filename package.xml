@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<package format="2">
+  <name>slam_benchmark</name>
+  <version>1.4.2</version>
+  <description>This package contains a several SLAM algorithm and launch file for bringup it.</description>
+  
+  <author>Vsevolod Egorov</author>
+  <maintainer email="Vsevolod.Egorov@ronavi.ru">Junior ROS developer</maintainer>
+  <license>BSD</license>
+
+  <url type="repository">https://github.com/sees1/slam_benchmark</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+
+  <exec_depend>gmapping</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>rosbag</exec_depend>
+  <exec_depend>pointcloud_to_laserscan</exec_depend>
+  <exec_depend>ira_laser_tools</exec_depend>
+
+</package>
