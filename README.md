@@ -9,7 +9,7 @@ Easy LIDAR-based bringup for mostly ROS SLAM packages
 To try specific SLAM with your bag file and LIDAR scheme you should do this steps:
 ```
 1. [in test_slam.launch] change configuration to match your lidar scheme.
-2. [in catkin ws] mkdir bag_files
+2. [in slam_benchmark dir] mkdir bag_files
 3. mv "your_bag_file".bag bag_files
 4. roslaunch slam_benchmark test_slam.launch SLAM_type:="hector_slam" bag_file:="your_bag_file"
 ```
