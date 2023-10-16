@@ -1,5 +1,5 @@
 # slam_benchmark
-Easy LIDAR-based bringup for mostly all ROS SLAM packages
+Easy LIDAR-based bringup for mostly ROS SLAM packages
 
 ## SLAM packages in use - slam_package_name:
 * `gmapping`
