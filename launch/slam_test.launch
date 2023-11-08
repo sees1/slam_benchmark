@@ -2,15 +2,20 @@
 
   <!-- 
   possible types of SLAM:
-  gmapping - launch file for gmapping 
+  gmapping    - launch file for gmapping 
+  hector_slam - launch file for hector_slam
+  rtabmap     - launch file for rtabmap
+  amcl        - launch file for amcl
+  als         - launch file for als
   -->
 
+  <param name="/use_sim_time" value="true"/>
+
   <arg name="SLAM_type"  default="gmapping"/>
-  <arg name="bag_file"   default="mini_room"/>
+  <arg name="bag_file"   default="new_mini_room"/>
   <arg name="scanner1"   default="/points2_front"/>
   <arg name="scanner2"   default="/points2_rear"/>
-
-  <param name="/use_sim_time" value="true"/>
+  <arg name="inter_rviz" default="true"/>
 
   <node name="rosbag" pkg="rosbag" type="play" output="log" args="--clock  $(find slam_benchmark)/bag/$(arg bag_file).bag" />
 
@@ -76,8 +81,39 @@
     <param name="range_max" value="20.0"/>
 	</node>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find slam_benchmark)/rviz/basic.rviz" />
+  <group if="$(arg inter_rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find slam_benchmark)/rviz/basic.rviz" />
+  </group>
 
-  <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch"/>
+  <!-- some simple setting with gmapping -->
+  <group if="$(eval SLAM_type == 'gmapping')">
+      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
+          <arg name="odom"                     value="odom"/>
+          <arg name="transform_publish_period" value="0.5"/>
+      </include>
+  </group>
+
+  <group if="$(eval SLAM_type == 'hector_slam')">
+      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
+      </include>
+  </group>
+
+  <!-- here rtabmap tune for imu and laser info. Don't use with map, odom frames -->
+  <group if="$(eval SLAM_type == 'rtabmap')">
+      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
+      </include>
+  </group>
+
+  <group if="$(eval SLAM_type == 'amcl')">
+      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
+        <arg name="map_file" default="maps_combine.yaml"/>
+      </include>
+  </group>
+
+  <group if="$(eval SLAM_type == 'als')">
+      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
+        <arg name="map_file" default="maps_combine.yaml"/>
+      </include>
+  </group>
 
 </launch>
