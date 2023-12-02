@@ -17,7 +17,7 @@
 		<param name="sensor_model/max_range" value="-1" />
 		
 		<!-- data source to integrate (PointCloud2) -->
-		<remap from="cloud_in" to="/points2_front" />
+		<remap from="cloud_in" to="/point2_out" />
 	
 	</node>
 </launch>

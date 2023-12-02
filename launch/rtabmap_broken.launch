@@ -93,7 +93,7 @@
   <arg name="gen_cloud_voxel"         default="0.05"/>
 
   <arg name="subscribe_scan"          default="true"/>
-  <arg name="scan_topic"              default="/scan_multi"/>
+  <arg name="scan_topic"              default="/points2_out/scan"/>
   <arg name="subscribe_scan_cloud"    default="$(arg gen_cloud)"/>
   <arg name="scan_cloud_topic"        default="/scan_cloud"/>
   <arg name="subscribe_scan_descriptor" default="false"/>

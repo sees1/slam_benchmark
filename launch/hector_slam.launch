@@ -6,7 +6,7 @@
   <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping" output="screen">
 
     <!-- Topic names -->
-    <param name="scan_topic" value="scan_multi"/>
+    <param name="scan_topic" value="points2_out/scan"/>
 
     <!-- Frame names -->
     <param name="base_frame" value="camera_top"/>
