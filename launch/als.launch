@@ -11,7 +11,7 @@
     <arg name="node_name" default="mcl" />
 
     <!-- Input messages -->
-    <arg name="scan_name" default="/scan_multi" /> <!-- sensor_msgs::LaserScan -->
+    <arg name="scan_name" default="/points2_out/scans" /> <!-- sensor_msgs::LaserScan -->
     <arg name="odom_name" default="" /> <!-- nav_msgs::Odometry -->
     <arg name="map_name" default="/map" /> <!-- nav_msgs::OccupancyGrid -->
 

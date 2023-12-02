@@ -1,0 +1,80 @@
+<launch>
+
+  <!-- 
+  possible types of SLAM:
+  amcl        - launch file for amcl
+  als         - launch file for als
+  gmcl        - launch file for gmcl
+  -->
+
+  <param name="/use_sim_time" value="true"/>
+
+  <arg name="localization_type"  default="gmapping"/>
+  <arg name="bag_file"           default="without_map_frame_large_room"/>
+  <arg name="map_file"           default="large_map_hector_2"/>
+  <arg name="scanner1"           default="/points2_front"/>
+  <arg name="scanner2"           default="/points2_rear"/>
+  <arg name="inter_rviz"         default="true"/>
+
+  <node name="rosbag" pkg="rosbag" type="play" output="log" args="--clock  $(find slam_benchmark)/bag/$(arg bag_file).bag" />
+
+  <node name="common_pcl2" pkg="concatenate_pcl2" type="concatenate_pcl2" output="screen">
+    <param name="theta"    value="-M_PI"/>
+    <param name="x_offset" value="-1.15"/>
+    <param name="y_offset" value="-0.30"/>
+
+    <param name="cloud1"    value="$(arg scanner1)"/>
+    <param name="cloud2"    value="$(arg scanner2)"/>
+    <param name="cloud_out" value="/points2_out"/>
+  </node>
+
+  <node name="rosbag" pkg="rosbag" type="play" output="log" args="--clock  $(find slam_benchmark)/bag/$(arg bag_file).bag" />
+
+  <!-- run pointcloud_to_laserscan node -->
+  <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan1">
+      <remap from="cloud_in" to="/points2_out"/>
+      <remap from="scan"     to="/points2_out/scan"/>
+      <rosparam>
+          target_frame: lidar_front # Leave disabled to output scan in pointcloud frame
+          transform_tolerance: 0.01
+          min_height: 0.0
+          max_height: 0.5
+          angle_min: -3.14 # M_PI
+          angle_max:  3.14 # M_PI
+          angle_increment: 0.0043 # M_PI/720.0
+          scan_time: 0.06666
+          range_min: 0.20
+          range_max: 50.0
+          use_inf: false
+          inf_epsilon: 1.0
+          # Concurrency level, affects number of pointclouds queued for processing and number of threads used
+          # 0 : Detect number of cores
+          # 1 : Single threaded
+          # 2->inf : Parallelism level
+          concurrency_level: 1
+      </rosparam>
+  </node>
+
+  <group if="$(arg inter_rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find slam_benchmark)/rviz/turtlebot3_navigation.rviz" />
+  </group>
+
+  <group if="$(eval localization_type == 'amcl')">
+      <include file="$(find slam_benchmark)/launch/$(arg localization_type).launch">
+        <arg name="map_file" default="$(arg map_file).yaml"/>
+      </include>
+  </group>
+
+  <group if="$(eval localization_type == 'als')">
+      <include file="$(find slam_benchmark)/launch/$(arg localization_type).launch">
+        <arg name="map_file" default="$(arg map_file).yaml"/>
+      </include>
+  </group>
+
+  <group if="$(eval localization_type == 'gmcl')">
+      <include file="$(find slam_benchmark)/launch/$(arg localization_type).launch">
+        <arg name="map_file" default="$(arg map_file).yaml"/>
+      </include>
+  </group>
+
+</launch>

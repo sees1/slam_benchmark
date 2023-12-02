@@ -1,0 +1,1062 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /TF1/Status1
+        - /OccupancyMap1
+        - /OccupancyGrid1
+      Splitter Ratio: 0.5
+    Tree Height: 644
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Name: Time
+    SyncMode: 0
+    SyncSource: PointCloud2
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_footprint:
+          Value: true
+        base_link:
+          Value: true
+        body_link:
+          Value: true
+        camera_bottom:
+          Value: true
+        camera_top:
+          Value: true
+        caster:
+          Value: true
+        fiducial_104:
+          Value: true
+        fiducial_105:
+          Value: true
+        fiducial_2048:
+          Value: true
+        fiducial_2065:
+          Value: true
+        fiducial_2066:
+          Value: true
+        fiducial_2067:
+          Value: true
+        fiducial_2068:
+          Value: true
+        fiducial_2069:
+          Value: true
+        fiducial_2070:
+          Value: true
+        fiducial_2071:
+          Value: true
+        fiducial_2072:
+          Value: true
+        fiducial_212:
+          Value: true
+        fiducial_213:
+          Value: true
+        fiducial_2138:
+          Value: true
+        fiducial_214:
+          Value: true
+        fiducial_2141:
+          Value: true
+        fiducial_216:
+          Value: true
+        fiducial_2180:
+          Value: true
+        fiducial_2181:
+          Value: true
+        fiducial_2184:
+          Value: true
+        fiducial_2195:
+          Value: true
+        fiducial_2196:
+          Value: true
+        fiducial_2197:
+          Value: true
+        fiducial_2198:
+          Value: true
+        fiducial_2199:
+          Value: true
+        fiducial_220:
+          Value: true
+        fiducial_2206:
+          Value: true
+        fiducial_221:
+          Value: true
+        fiducial_222:
+          Value: true
+        fiducial_2221:
+          Value: true
+        fiducial_2222:
+          Value: true
+        fiducial_2236:
+          Value: true
+        fiducial_2257:
+          Value: true
+        fiducial_2268:
+          Value: true
+        fiducial_2272:
+          Value: true
+        fiducial_2279:
+          Value: true
+        fiducial_228:
+          Value: true
+        fiducial_2284:
+          Value: true
+        fiducial_2285:
+          Value: true
+        fiducial_2286:
+          Value: true
+        fiducial_229:
+          Value: true
+        fiducial_230:
+          Value: true
+        fiducial_231:
+          Value: true
+        fiducial_232:
+          Value: true
+        fiducial_233:
+          Value: true
+        fiducial_234:
+          Value: true
+        fiducial_236:
+          Value: true
+        fiducial_237:
+          Value: true
+        fiducial_243:
+          Value: true
+        fiducial_247:
+          Value: true
+        fiducial_248:
+          Value: true
+        fiducial_249:
+          Value: true
+        fiducial_250:
+          Value: true
+        fiducial_253:
+          Value: true
+        fiducial_259:
+          Value: true
+        fiducial_260:
+          Value: true
+        fiducial_3144:
+          Value: true
+        fiducial_3222:
+          Value: true
+        fiducial_3223:
+          Value: true
+        fiducial_3224:
+          Value: true
+        fiducial_3225:
+          Value: true
+        fiducial_3237:
+          Value: true
+        fiducial_3238:
+          Value: true
+        fiducial_3239:
+          Value: true
+        fiducial_3249:
+          Value: true
+        fiducial_3257:
+          Value: true
+        fiducial_3258:
+          Value: true
+        fiducial_3261:
+          Value: true
+        fiducial_3262:
+          Value: true
+        fiducial_3263:
+          Value: true
+        fiducial_3265:
+          Value: true
+        fiducial_3282:
+          Value: true
+        fiducial_3283:
+          Value: true
+        fiducial_3288:
+          Value: true
+        fiducial_3299:
+          Value: true
+        fiducial_3310:
+          Value: true
+        fiducial_3315:
+          Value: true
+        fiducial_3319:
+          Value: true
+        fiducial_3330:
+          Value: true
+        fiducial_3332:
+          Value: true
+        fiducial_3342:
+          Value: true
+        fiducial_3344:
+          Value: true
+        fiducial_3345:
+          Value: true
+        fiducial_3346:
+          Value: true
+        fiducial_3348:
+          Value: true
+        fiducial_3349:
+          Value: true
+        fiducial_3350:
+          Value: true
+        fiducial_3352:
+          Value: true
+        fiducial_3413:
+          Value: true
+        fiducial_399:
+          Value: true
+        fiducial_404:
+          Value: true
+        fiducial_405:
+          Value: true
+        fiducial_406:
+          Value: true
+        fiducial_411:
+          Value: true
+        fiducial_413:
+          Value: true
+        fiducial_415:
+          Value: true
+        fiducial_421:
+          Value: true
+        fiducial_425:
+          Value: true
+        fiducial_429:
+          Value: true
+        fiducial_431:
+          Value: true
+        fiducial_438:
+          Value: true
+        fiducial_442:
+          Value: true
+        fiducial_445:
+          Value: true
+        fiducial_448:
+          Value: true
+        fiducial_453:
+          Value: true
+        fiducial_462:
+          Value: true
+        fiducial_465:
+          Value: true
+        fiducial_473:
+          Value: true
+        fiducial_476:
+          Value: true
+        fiducial_497:
+          Value: true
+        fiducial_500:
+          Value: true
+        fiducial_501:
+          Value: true
+        fiducial_504:
+          Value: true
+        fiducial_533:
+          Value: true
+        fiducial_535:
+          Value: true
+        fiducial_537:
+          Value: true
+        fiducial_539:
+          Value: true
+        fiducial_541:
+          Value: true
+        fiducial_545:
+          Value: true
+        fiducial_546:
+          Value: true
+        fiducial_549:
+          Value: true
+        fiducial_566:
+          Value: true
+        fiducial_574:
+          Value: true
+        fiducial_594:
+          Value: true
+        fiducial_596:
+          Value: true
+        fiducial_613:
+          Value: true
+        fiducial_622:
+          Value: true
+        fiducial_623:
+          Value: true
+        fiducial_626:
+          Value: true
+        fiducial_627:
+          Value: true
+        fiducial_629:
+          Value: true
+        fiducial_637:
+          Value: true
+        fiducial_656:
+          Value: true
+        fiducial_678:
+          Value: true
+        fiducial_680:
+          Value: true
+        fiducial_682:
+          Value: true
+        fiducial_688:
+          Value: true
+        fiducial_705:
+          Value: true
+        fiducial_706:
+          Value: true
+        fiducial_707:
+          Value: true
+        fiducial_710:
+          Value: true
+        fiducial_713:
+          Value: true
+        fiducial_716:
+          Value: true
+        fiducial_717:
+          Value: true
+        fiducial_718:
+          Value: true
+        fiducial_719:
+          Value: true
+        fiducial_720:
+          Value: true
+        fiducial_721:
+          Value: true
+        fiducial_722:
+          Value: true
+        fiducial_723:
+          Value: true
+        fiducial_731:
+          Value: true
+        fiducial_732:
+          Value: true
+        fiducial_733:
+          Value: true
+        fiducial_734:
+          Value: true
+        fiducial_736:
+          Value: true
+        fiducial_741:
+          Value: true
+        fiducial_744:
+          Value: true
+        fiducial_746:
+          Value: true
+        fiducial_749:
+          Value: true
+        fiducial_750:
+          Value: true
+        fiducial_818:
+          Value: true
+        fiducial_819:
+          Value: true
+        fiducial_820:
+          Value: true
+        fiducial_821:
+          Value: true
+        fiducial_822:
+          Value: true
+        fiducial_823:
+          Value: true
+        fiducial_824:
+          Value: true
+        fiducial_825:
+          Value: true
+        fiducial_826:
+          Value: true
+        fiducial_827:
+          Value: true
+        fiducial_828:
+          Value: true
+        fiducial_829:
+          Value: true
+        fiducial_830:
+          Value: true
+        fiducial_831:
+          Value: true
+        fiducial_832:
+          Value: true
+        fiducial_833:
+          Value: true
+        fiducial_834:
+          Value: true
+        fiducial_835:
+          Value: true
+        fiducial_848:
+          Value: true
+        fiducial_849:
+          Value: true
+        fiducial_850:
+          Value: true
+        fiducial_851:
+          Value: true
+        fiducial_852:
+          Value: true
+        fiducial_853:
+          Value: true
+        fiducial_854:
+          Value: true
+        fiducial_855:
+          Value: true
+        fiducial_856:
+          Value: true
+        fiducial_88:
+          Value: true
+        fiducial_957:
+          Value: true
+        fiducial_958:
+          Value: true
+        fiducial_959:
+          Value: true
+        fiducial_96:
+          Value: true
+        fiducial_960:
+          Value: true
+        fiducial_961:
+          Value: true
+        fiducial_962:
+          Value: true
+        fiducial_963:
+          Value: true
+        fiducial_964:
+          Value: true
+        fiducial_965:
+          Value: true
+        fiducial_966:
+          Value: true
+        fiducial_967:
+          Value: true
+        fiducial_968:
+          Value: true
+        fiducial_969:
+          Value: true
+        fiducial_970:
+          Value: true
+        fiducial_971:
+          Value: true
+        imu_link:
+          Value: true
+        lidar_front:
+          Value: true
+        lidar_rear:
+          Value: true
+        lifter:
+          Value: true
+        odom:
+          Value: true
+        wheel_left:
+          Value: true
+        wheel_right:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        odom:
+          base_footprint:
+            base_link:
+              body_link:
+                caster:
+                  {}
+                lidar_front:
+                  {}
+                lidar_rear:
+                  {}
+                lifter:
+                  {}
+              camera_bottom:
+                fiducial_104:
+                  {}
+                fiducial_105:
+                  {}
+                fiducial_2048:
+                  {}
+                fiducial_2065:
+                  {}
+                fiducial_2066:
+                  {}
+                fiducial_2067:
+                  {}
+                fiducial_2068:
+                  {}
+                fiducial_2069:
+                  {}
+                fiducial_2070:
+                  {}
+                fiducial_2071:
+                  {}
+                fiducial_2072:
+                  {}
+                fiducial_212:
+                  {}
+                fiducial_213:
+                  {}
+                fiducial_2138:
+                  {}
+                fiducial_214:
+                  {}
+                fiducial_2141:
+                  {}
+                fiducial_216:
+                  {}
+                fiducial_2180:
+                  {}
+                fiducial_2181:
+                  {}
+                fiducial_2184:
+                  {}
+                fiducial_2195:
+                  {}
+                fiducial_2196:
+                  {}
+                fiducial_2197:
+                  {}
+                fiducial_2198:
+                  {}
+                fiducial_2199:
+                  {}
+                fiducial_220:
+                  {}
+                fiducial_2206:
+                  {}
+                fiducial_221:
+                  {}
+                fiducial_222:
+                  {}
+                fiducial_2221:
+                  {}
+                fiducial_2222:
+                  {}
+                fiducial_2236:
+                  {}
+                fiducial_2257:
+                  {}
+                fiducial_2268:
+                  {}
+                fiducial_2272:
+                  {}
+                fiducial_2279:
+                  {}
+                fiducial_228:
+                  {}
+                fiducial_2284:
+                  {}
+                fiducial_2285:
+                  {}
+                fiducial_2286:
+                  {}
+                fiducial_229:
+                  {}
+                fiducial_230:
+                  {}
+                fiducial_231:
+                  {}
+                fiducial_232:
+                  {}
+                fiducial_233:
+                  {}
+                fiducial_234:
+                  {}
+                fiducial_236:
+                  {}
+                fiducial_237:
+                  {}
+                fiducial_243:
+                  {}
+                fiducial_247:
+                  {}
+                fiducial_248:
+                  {}
+                fiducial_249:
+                  {}
+                fiducial_250:
+                  {}
+                fiducial_253:
+                  {}
+                fiducial_259:
+                  {}
+                fiducial_260:
+                  {}
+                fiducial_3144:
+                  {}
+                fiducial_3222:
+                  {}
+                fiducial_3223:
+                  {}
+                fiducial_3224:
+                  {}
+                fiducial_3225:
+                  {}
+                fiducial_3237:
+                  {}
+                fiducial_3238:
+                  {}
+                fiducial_3239:
+                  {}
+                fiducial_3249:
+                  {}
+                fiducial_3257:
+                  {}
+                fiducial_3258:
+                  {}
+                fiducial_3261:
+                  {}
+                fiducial_3262:
+                  {}
+                fiducial_3263:
+                  {}
+                fiducial_3265:
+                  {}
+                fiducial_3282:
+                  {}
+                fiducial_3283:
+                  {}
+                fiducial_3288:
+                  {}
+                fiducial_3299:
+                  {}
+                fiducial_3310:
+                  {}
+                fiducial_3315:
+                  {}
+                fiducial_3319:
+                  {}
+                fiducial_3330:
+                  {}
+                fiducial_3332:
+                  {}
+                fiducial_3342:
+                  {}
+                fiducial_3344:
+                  {}
+                fiducial_3345:
+                  {}
+                fiducial_3346:
+                  {}
+                fiducial_3348:
+                  {}
+                fiducial_3349:
+                  {}
+                fiducial_3350:
+                  {}
+                fiducial_3352:
+                  {}
+                fiducial_3413:
+                  {}
+                fiducial_399:
+                  {}
+                fiducial_404:
+                  {}
+                fiducial_405:
+                  {}
+                fiducial_406:
+                  {}
+                fiducial_411:
+                  {}
+                fiducial_413:
+                  {}
+                fiducial_415:
+                  {}
+                fiducial_421:
+                  {}
+                fiducial_425:
+                  {}
+                fiducial_429:
+                  {}
+                fiducial_431:
+                  {}
+                fiducial_438:
+                  {}
+                fiducial_442:
+                  {}
+                fiducial_445:
+                  {}
+                fiducial_448:
+                  {}
+                fiducial_453:
+                  {}
+                fiducial_462:
+                  {}
+                fiducial_465:
+                  {}
+                fiducial_473:
+                  {}
+                fiducial_476:
+                  {}
+                fiducial_497:
+                  {}
+                fiducial_500:
+                  {}
+                fiducial_501:
+                  {}
+                fiducial_504:
+                  {}
+                fiducial_533:
+                  {}
+                fiducial_535:
+                  {}
+                fiducial_537:
+                  {}
+                fiducial_539:
+                  {}
+                fiducial_541:
+                  {}
+                fiducial_545:
+                  {}
+                fiducial_546:
+                  {}
+                fiducial_549:
+                  {}
+                fiducial_566:
+                  {}
+                fiducial_574:
+                  {}
+                fiducial_594:
+                  {}
+                fiducial_596:
+                  {}
+                fiducial_613:
+                  {}
+                fiducial_622:
+                  {}
+                fiducial_623:
+                  {}
+                fiducial_626:
+                  {}
+                fiducial_627:
+                  {}
+                fiducial_629:
+                  {}
+                fiducial_637:
+                  {}
+                fiducial_656:
+                  {}
+                fiducial_678:
+                  {}
+                fiducial_680:
+                  {}
+                fiducial_682:
+                  {}
+                fiducial_688:
+                  {}
+                fiducial_705:
+                  {}
+                fiducial_706:
+                  {}
+                fiducial_707:
+                  {}
+                fiducial_710:
+                  {}
+                fiducial_713:
+                  {}
+                fiducial_716:
+                  {}
+                fiducial_717:
+                  {}
+                fiducial_718:
+                  {}
+                fiducial_719:
+                  {}
+                fiducial_720:
+                  {}
+                fiducial_721:
+                  {}
+                fiducial_722:
+                  {}
+                fiducial_723:
+                  {}
+                fiducial_731:
+                  {}
+                fiducial_732:
+                  {}
+                fiducial_733:
+                  {}
+                fiducial_734:
+                  {}
+                fiducial_736:
+                  {}
+                fiducial_741:
+                  {}
+                fiducial_744:
+                  {}
+                fiducial_746:
+                  {}
+                fiducial_749:
+                  {}
+                fiducial_750:
+                  {}
+                fiducial_818:
+                  {}
+                fiducial_819:
+                  {}
+                fiducial_820:
+                  {}
+                fiducial_821:
+                  {}
+                fiducial_822:
+                  {}
+                fiducial_823:
+                  {}
+                fiducial_824:
+                  {}
+                fiducial_825:
+                  {}
+                fiducial_826:
+                  {}
+                fiducial_827:
+                  {}
+                fiducial_828:
+                  {}
+                fiducial_829:
+                  {}
+                fiducial_830:
+                  {}
+                fiducial_831:
+                  {}
+                fiducial_832:
+                  {}
+                fiducial_833:
+                  {}
+                fiducial_834:
+                  {}
+                fiducial_835:
+                  {}
+                fiducial_848:
+                  {}
+                fiducial_849:
+                  {}
+                fiducial_850:
+                  {}
+                fiducial_851:
+                  {}
+                fiducial_852:
+                  {}
+                fiducial_853:
+                  {}
+                fiducial_854:
+                  {}
+                fiducial_855:
+                  {}
+                fiducial_856:
+                  {}
+                fiducial_88:
+                  {}
+                fiducial_957:
+                  {}
+                fiducial_958:
+                  {}
+                fiducial_959:
+                  {}
+                fiducial_96:
+                  {}
+                fiducial_960:
+                  {}
+                fiducial_961:
+                  {}
+                fiducial_962:
+                  {}
+                fiducial_963:
+                  {}
+                fiducial_964:
+                  {}
+                fiducial_965:
+                  {}
+                fiducial_966:
+                  {}
+                fiducial_967:
+                  {}
+                fiducial_968:
+                  {}
+                fiducial_969:
+                  {}
+                fiducial_970:
+                  {}
+                fiducial_971:
+                  {}
+              camera_top:
+                {}
+              imu_link:
+                {}
+              wheel_left:
+                {}
+              wheel_right:
+                {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /octomap_point_cloud_centers
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: octomap_rviz_plugin/OccupancyMap
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Max. Octree Depth: 16
+      Name: OccupancyMap
+      Octomap Binary Topic: /octomap_binary
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
+    - Class: octomap_rviz_plugin/OccupancyGrid
+      Enabled: true
+      Max. Height Display: 4
+      Max. Octree Depth: 16
+      Min. Height Display: -inf
+      Name: OccupancyGrid
+      Octomap Topic: /octomap_binary
+      Queue Size: 5
+      Value: true
+      Voxel Alpha: 1
+      Voxel Coloring: Z-Axis
+      Voxel Rendering: Occupied Voxels
+    - Alpha: 0.699999988079071
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /projected_map
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: odom
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/XYOrbit
+      Distance: 18.258216857910156
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: -12.222156524658203
+        Y: -2.414062976837158
+        Z: -1.049041748046875e-05
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.244796633720398
+      Target Frame: <Fixed Frame>
+      Yaw: 4.710390090942383
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 941
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd0000000400000000000001560000030ffc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000030f000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000030ffc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d0000030f000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006b50000003efc0100000002fb0000000800540069006d00650100000000000006b5000003bc00fffffffb0000000800540069006d00650100000000000004500000000000000000000004440000030f00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1717
+  X: 2102
+  Y: 55
