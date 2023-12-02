@@ -9,8 +9,9 @@ Panels:
         - /Map1
         - /Pose1
         - /LaserScan1
+        - /PointCloud21
       Splitter Ratio: 0.5
-    Tree Height: 719
+    Tree Height: 746
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -28,7 +29,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: PointCloud2
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -73,99 +74,7 @@ Visualization Manager:
           Value: true
         caster:
           Value: true
-        fiducial_2257:
-          Value: true
-        fiducial_2268:
-          Value: true
-        fiducial_2272:
-          Value: true
-        fiducial_2279:
-          Value: true
-        fiducial_2284:
-          Value: true
-        fiducial_2285:
-          Value: true
-        fiducial_2286:
-          Value: true
-        fiducial_3315:
-          Value: true
-        fiducial_3319:
-          Value: true
-        fiducial_3330:
-          Value: true
-        fiducial_3332:
-          Value: true
-        fiducial_3344:
-          Value: true
-        fiducial_3345:
-          Value: true
-        fiducial_3413:
-          Value: true
-        fiducial_399:
-          Value: true
-        fiducial_404:
-          Value: true
         fiducial_405:
-          Value: true
-        fiducial_406:
-          Value: true
-        fiducial_411:
-          Value: true
-        fiducial_413:
-          Value: true
-        fiducial_415:
-          Value: true
-        fiducial_421:
-          Value: true
-        fiducial_425:
-          Value: true
-        fiducial_429:
-          Value: true
-        fiducial_431:
-          Value: true
-        fiducial_438:
-          Value: true
-        fiducial_442:
-          Value: true
-        fiducial_445:
-          Value: true
-        fiducial_448:
-          Value: true
-        fiducial_453:
-          Value: true
-        fiducial_465:
-          Value: true
-        fiducial_88:
-          Value: true
-        fiducial_957:
-          Value: true
-        fiducial_958:
-          Value: true
-        fiducial_959:
-          Value: true
-        fiducial_960:
-          Value: true
-        fiducial_961:
-          Value: true
-        fiducial_962:
-          Value: true
-        fiducial_963:
-          Value: true
-        fiducial_964:
-          Value: true
-        fiducial_965:
-          Value: true
-        fiducial_966:
-          Value: true
-        fiducial_967:
-          Value: true
-        fiducial_968:
-          Value: true
-        fiducial_969:
-          Value: true
-        fiducial_970:
-          Value: true
-        fiducial_971:
           Value: true
         imu_link:
           Value: true
@@ -204,99 +113,7 @@ Visualization Manager:
                   lifter:
                     {}
                 camera_bottom:
-                  fiducial_2257:
-                    {}
-                  fiducial_2268:
-                    {}
-                  fiducial_2272:
-                    {}
-                  fiducial_2279:
-                    {}
-                  fiducial_2284:
-                    {}
-                  fiducial_2285:
-                    {}
-                  fiducial_2286:
-                    {}
-                  fiducial_3315:
-                    {}
-                  fiducial_3319:
-                    {}
-                  fiducial_3330:
-                    {}
-                  fiducial_3332:
-                    {}
-                  fiducial_3344:
-                    {}
-                  fiducial_3345:
-                    {}
-                  fiducial_3413:
-                    {}
-                  fiducial_399:
-                    {}
-                  fiducial_404:
-                    {}
                   fiducial_405:
-                    {}
-                  fiducial_406:
-                    {}
-                  fiducial_411:
-                    {}
-                  fiducial_413:
-                    {}
-                  fiducial_415:
-                    {}
-                  fiducial_421:
-                    {}
-                  fiducial_425:
-                    {}
-                  fiducial_429:
-                    {}
-                  fiducial_431:
-                    {}
-                  fiducial_438:
-                    {}
-                  fiducial_442:
-                    {}
-                  fiducial_445:
-                    {}
-                  fiducial_448:
-                    {}
-                  fiducial_453:
-                    {}
-                  fiducial_465:
-                    {}
-                  fiducial_88:
-                    {}
-                  fiducial_957:
-                    {}
-                  fiducial_958:
-                    {}
-                  fiducial_959:
-                    {}
-                  fiducial_960:
-                    {}
-                  fiducial_961:
-                    {}
-                  fiducial_962:
-                    {}
-                  fiducial_963:
-                    {}
-                  fiducial_964:
-                    {}
-                  fiducial_965:
-                    {}
-                  fiducial_966:
-                    {}
-                  fiducial_967:
-                    {}
-                  fiducial_968:
-                    {}
-                  fiducial_969:
-                    {}
-                  fiducial_970:
-                    {}
-                  fiducial_971:
                     {}
                 camera_top:
                   {}
@@ -312,12 +129,12 @@ Visualization Manager:
       Class: rviz/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Map
       Topic: /map
       Unreliable: false
       Use Timestamp: false
-      Value: true
+      Value: false
     - Alpha: 1
       Axes Length: 1
       Axes Radius: 0.10000000149011612
@@ -394,7 +211,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -409,7 +226,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
+      Value: false
     - Alpha: 1
       Arrow Length: 0.30000001192092896
       Axes Length: 0.30000001192092896
@@ -426,6 +243,34 @@ Visualization Manager:
       Shape: Arrow (Flat)
       Topic: /mcl_particles
       Unreliable: false
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.05000000074505806
+      Style: Flat Squares
+      Topic: /point2_out
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
       Value: true
   Enabled: true
   Global Options:
@@ -464,18 +309,18 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 24.890350341796875
+      Scale: 10.172077178955078
       Target Frame: <Fixed Frame>
-      X: -21.770662307739258
-      Y: -1.7590373754501343
+      X: -29.242109298706055
+      Y: 21.343433380126953
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1016
+  Height: 1043
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001560000035afc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000035a000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000035afc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d0000035a000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007380000003efc0100000002fb0000000800540069006d0065010000000000000738000003bc00fffffffb0000000800540069006d00650100000000000004500000000000000000000004c70000035a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000015600000375fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d00000375000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000375fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d00000375000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007800000003efc0100000002fb0000000800540069006d0065010000000000000780000003bc00fffffffb0000000800540069006d006501000000000000045000000000000000000000050f0000037500000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -484,6 +329,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1848
-  X: 72
-  Y: 27
+  Width: 1920
+  X: 0
+  Y: 0

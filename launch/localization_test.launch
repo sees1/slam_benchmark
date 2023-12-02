@@ -2,24 +2,23 @@
 
   <!-- 
   possible types of SLAM:
-  gmapping        - launch file for gmapping 
-  hector_slam     - launch file for hector_slam
-  rtabmap         - launch file for rtabmap
-  rtabmap_broken  - launch file for broken mapping with rtabmap
-  octomap_mapping - launch file for octomap_mapping
+  amcl        - launch file for amcl
+  als         - launch file for als
+  gmcl        - launch file for gmcl
   -->
 
   <param name="/use_sim_time" value="true"/>
 
-  <arg name="SLAM_type"  default="gmapping"/>
-  <arg name="bag_file"   default="new_mini_room"/>
-  <arg name="scanner1"   default="/points2_front"/>
-  <arg name="scanner2"   default="/points2_rear"/>
-  <arg name="inter_rviz" default="true"/>
+  <arg name="localization_type"  default="gmapping"/>
+  <arg name="bag_file"           default="without_map_frame_large_room"/>
+  <arg name="map_file"           default="large_map_hector_2"/>
+  <arg name="scanner1"           default="/points2_front"/>
+  <arg name="scanner2"           default="/points2_rear"/>
+  <arg name="inter_rviz"         default="true"/>
 
   <node name="rosbag" pkg="rosbag" type="play" output="log" args="--clock  $(find slam_benchmark)/bag/$(arg bag_file).bag" />
 
-  <!-- run pointcloud_to_laserscan node -->
+    <!-- run pointcloud_to_laserscan node -->
   <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan1">
       <remap from="cloud_in" to="$(arg scanner1)"/>
       <remap from="scan" to="$(arg scanner1)/scan"/>
@@ -72,7 +71,7 @@
     <param name="destination_frame" value="camera_top"/>
     <param name="cloud_destination_topic" value="/merged_cloud"/>
     <param name="scan_destination_topic" value="/scan_multi"/>
-    <param name="laserscan_topics" value ="$(arg scanner1)/scan $(arg scanner2)/scan" /> <!-- LIST OF THE LASER SCAN TOPICS TO SUBSCRIBE -->
+    <param name="laserscan_topics" value ="$(arg scanner1)/scan $(arg scanner2)/scan" />
     <param name="angle_min" value="-3.14"/>
     <param name="angle_max" value="3.14"/>
     <param name="angle_increment" value="0.0043"/>
@@ -82,49 +81,24 @@
 	</node>
 
   <group if="$(arg inter_rviz)">
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find slam_benchmark)/rviz/basic.rviz" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find slam_benchmark)/rviz/turtlebot3_navigation.rviz" />
   </group>
 
-  <!-- some simple setting with gmapping -->
-  <group if="$(eval SLAM_type == 'gmapping')">
-      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
-          <arg name="odom"                     value="odom"/>
-          <arg name="transform_publish_period" value="0.5"/>
+  <group if="$(eval localization_type == 'amcl')">
+      <include file="$(find slam_benchmark)/launch/$(arg localization_type).launch">
+        <arg name="map_file" default="$(arg map_file).yaml"/>
       </include>
   </group>
 
-  <group if="$(eval SLAM_type == 'hector_slam')">
-      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
+  <group if="$(eval localization_type == 'als')">
+      <include file="$(find slam_benchmark)/launch/$(arg localization_type).launch">
+        <arg name="map_file" default="$(arg map_file).yaml"/>
       </include>
   </group>
 
-  <!-- here rtabmap tune for imu and laser info. Don't use with map, odom frames -->
-  <group if="$(eval SLAM_type == 'rtabmap')">
-      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
-      </include>
-  </group>
-
-  <!-- here rtabmap tune for mapping. Use only for mapping. Tracking only map and base_footprint frame. All estimate feature is disabled -->
-  <group if="$(eval SLAM_type == 'rtabmap_broken')">
-      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
-      </include>
-  </group>
-
-  <group if="$(eval SLAM_type == 'amcl')">
-      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
-        <arg name="map_file" default="maps_combine.yaml"/>
-      </include>
-  </group>
-
-  <group if="$(eval SLAM_type == 'als')">
-      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
-        <arg name="map_file" default="maps_combine.yaml"/>
-      </include>
-  </group>
-
-  <!-- 3d mapping -->
-  <group if="$(eval SLAM_type == 'octomap_mapping')">
-      <include file="$(find slam_benchmark)/launch/$(arg SLAM_type).launch">
+  <group if="$(eval localization_type == 'gmcl')">
+      <include file="$(find slam_benchmark)/launch/$(arg localization_type).launch">
+        <arg name="map_file" default="$(arg map_file).yaml"/>
       </include>
   </group>
 
