@@ -21,7 +21,7 @@
   <node name="common_pcl2" pkg="concatenate_pcl2" type="concatenate_pcl2" output="screen">
     <param name="theta"    value="-M_PI"/>
     <param name="x_offset" value="-1.15"/>
-    <param name="y_offset" value="-0.30"/>
+    <param name="y_offset" value="-0.23"/>
 
     <param name="cloud1"    value="$(arg scanner1)"/>
     <param name="cloud2"    value="$(arg scanner2)"/>
