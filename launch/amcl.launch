@@ -3,10 +3,11 @@
   <!-- Run the map server -->
   <arg name="map_file" default=""/>
   <arg name="map_path" default ="$(find slam_benchmark)/maps"/>
+
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_path)/$(arg map_file)" />
 
   <!-- Arguments -->
-  <arg name="scan_topic"     default="points2_out/scan"/>
+  <arg name="scan_topic"     default="/points2_out/scan"/>
   <arg name="initial_pose_x" default="0.0"/>
   <arg name="initial_pose_y" default="0.0"/>
   <arg name="initial_pose_a" default="0.0"/>
